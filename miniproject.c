@@ -63,10 +63,10 @@ void drawLine(int x1,int y1,int x2,int y2)
 //drawing rectangle
 void drawRectangle(int x1,int y1,int x2,int y2)
 {
-    drawLine(x1, y1, x2, y1);
+    drawLine(x1, y1, x1, y2);
     drawLine(x2, y1, x2, y2);
-    drawLine(x2, y2, x1, y2);
-    drawLine(x1, y2, x1, y1);
+    drawLine(x1, y1, x2, y1);
+    drawLine(x1, y2, x2, y2);
 }   
 //drawing circle
 void drawCircle(int x0,int y0,int r)
@@ -106,9 +106,42 @@ void redrawCanvas()
             drawCircle(obj.x1, obj.y1, obj.r);
             break;
         case 4:
-            drawTriangle(obj.x1, obj.y1, obj.x2, obj.y2, obj.r, obj.r); 
+            drawTriangle(obj.x1, obj.y1, obj.x2, obj.y2, obj.r, obj.y2); 
             break;
         }
     }
+}
+//Add function
+void addline()
+{
+    Object obj;
+    obj.type = 1;
+    printf("Enter x1 y1 x2 y2: ");
+    scanf("%d %d %d %d", &obj.x1, &obj.y1, &obj.x2, &obj.y2);
+    objects[objectCount++] = obj;
+}
+void addRectangle()
+{
+    Object obj;
+    obj.type = 2;
+    printf("Enter top-left and bottom-right coordinates:\n ");
+    scanf("%d %d %d %d", &obj.x1, &obj.y1, &obj.x2, &obj.y2);
+    objects[objectCount++] = obj;
+}
+void addCircle()
+{
+    Object obj;
+    obj.type = 3;
+    printf("Enter center x y and radius: ");
+    scanf("%d %d %d", &obj.x1, &obj.y1, &obj.r);
+    objects[objectCount++] = obj;
+}
+void addTriangle()
+{
+    Object obj;
+    obj.type = 4;
+    printf("Enter x1 y1 x2 y2 x3 y3:\n ");
+    scanf("%d %d %d %d %d %d", &obj.x1, &obj.y1, &obj.x2, &obj.y2, &obj.r, &obj.y2); 
+    objects[objectCount++] = obj;
 }
 
