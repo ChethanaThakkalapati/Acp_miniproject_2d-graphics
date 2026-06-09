@@ -218,5 +218,57 @@ void modifyObject()
         break;
     }
 }
+//main function
+int main()
+{
+    clearCanvas();
+    int choice;
+    while(1)
+    {
+        printf("\n======2D Graphics Editor======\n");
+        printf("Which shape do you want to draw?\n");
+        printf("1.Line\n");
+        printf("2.Rectangle\n");
+        printf("3.Circle\n");
+        printf("4.Triangle\n");
+        printf("5.Delete Object\n");
+        printf("6.Modify Object\n");
+        printf("7.Display Canvas\n");
+        printf("8.Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
+        switch(choice)
+        {
+            case 1:
+                addline();
+                break;
+            case 2:
+                addRectangle();
+                break;
+            case 3:
+                addCircle();
+                break;
+            case 4:
+                addTriangle();
+                break;
+            case 5:
+                deleteObject();
+                break;
+            case 6:
+                modifyObject();
+                break;
+            case 7:
+                redrawCanvas();
+                displayCanvas();
+                break;
+            case 8:
+                printf("Exiting...\n");
+                exit(0);
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+    return 0;
+}
 
