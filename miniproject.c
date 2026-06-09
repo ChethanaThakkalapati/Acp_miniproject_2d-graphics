@@ -237,7 +237,7 @@ int main()
         printf("8.Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-
+        //performing operations based on user choice
         switch(choice)
         {
             case 1:
@@ -263,12 +263,14 @@ int main()
                 displayCanvas();
                 break;
             case 8:
-                printf("Exiting...\n");
+                printf("Exiting....\n");
                 exit(0);
             default:
                 printf("Invalid choice! Please try again.\n");
         }
     }
     return 0;
+    //End of main function
+    //2D Graphics Editor Completed
 }
 
