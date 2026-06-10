@@ -1,0 +1,135 @@
+MINI PROJECT - GENERATIVE AI PROMPTS AND RESPONSES
+
+
+PROMPT 1
+Problem Statement: Write a 2D graphics editor using * and _.
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to:
+* add objects to the picture
+* delete objects from the picture
+* modify objects in the picture
+Use a 2D array of characters to store the picture.
+Write a function to display the picture.
+
+RESPONSE 1
+Suggested approach:
+
+1. Use a 2D character array as a canvas.
+2. Initialize the canvas with '_' characters.
+3. Use '*' characters to draw shapes.
+4. Implement functions:
+   * drawLine()
+   * drawRectangle()
+   * drawCircle()
+   * drawTriangle()
+5. Store all shapes in an array of structures.
+6. Implement:
+   * Add Object
+   * Delete Object
+   * Modify Object
+7. Redraw the canvas whenever an object is added, deleted, or modified.
+8. Display the canvas using nested loops.
+
+
+PROMPT 2
+Explain the problem and logic.
+
+RESPONSE 2
+The graphics editor uses a 2D character array as a drawing surface.
+Each shape is represented by a structure containing:
+* Shape type
+* Coordinates
+* Radius (for circles)
+Objects are stored in an array.
+When the user chooses to display the picture:
+1. The canvas is cleared.
+2. Every stored object is drawn again.
+3. The completed picture is displayed.
+This allows objects to be modified or deleted easily.
+
+
+PROMPT 3
+Is my C implementation correct and does it satisfy the problem statement?
+
+RESPONSE 3
+Review:
+
+✔ Uses a 2D character array to store the picture.
+✔ Draws Line, Rectangle, Circle, and Triangle.
+✔ Supports Add Object operation.
+✔ Supports Delete Object operation.
+✔ Supports Modify Object operation.
+✔ Displays the picture.
+✔ Stores objects using structures.
+
+Suggested Improvements:
+
+1. Add a division-by-zero check in drawLine().
+2. Display object indices before delete/modify operations.
+3. Normalize rectangle coordinates if entered in reverse order.
+Overall the implementation satisfies the problem statement.
+
+
+PROMPT 4
+How do I execute the program?
+
+RESPONSE 4
+Compilation:
+//lm is used because the program contains sin cos rad function.
+gcc miniproject.c -o miniproject -lm
+Execution:
+Linux:
+./miniproject
+Windows:
+.\miniproject.exe
+
+Sample workflow:
+
+1. Add Rectangle
+2. Add Circle
+3. Add Triangle
+4. Display Picture
+5. Modify Object
+6. Delete Object
+7. Display Picture
+8. Exit
+
+
+PROMPT 5
+What should I write in the README file?
+
+
+RESPONSE 5
+README CONTENT
+
+Title:
+2D Graphics Editor Using C
+
+Description:
+This project implements a simple 2D graphics editor using a 2D character array. Shapes are drawn using '*' characters and empty spaces are represented using '_'.
+
+Features:
+
+* Draw Line
+* Draw Rectangle
+* Draw Circle
+* Draw Triangle
+* Add Objects
+* Delete Objects
+* Modify Objects
+* Display Picture
+
+Data Structures:
+
+* 2D Character Array
+* Structure for Object Information
+* Array of Objects
+
+Compilation:
+gcc miniproject.c -o miniproject -lm
+
+Execution:
+.\miniproject.exe
+
+Outcome:
+Successfully demonstrates basic computer graphics concepts using character-based drawing.
